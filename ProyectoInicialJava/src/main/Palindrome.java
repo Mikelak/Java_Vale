@@ -57,19 +57,21 @@ public class Palindrome {
 	}
 	
 	private static boolean recursivePalindrome(String cad, int num)
-	{
+	{		
+		boolean ok = (cad.charAt(num) == cad.charAt((cad.length() - 1) - num));
+		
 		if (num == cad.length() - 1)
 		{
-			return cad.charAt(num) == cad.charAt(0);
+			return ok;
 		}
 		else
 		{
-			return recursivePalindrome(cad, num++);
+			return ok && recursivePalindrome(cad, num++);
 		}		
 	}
 	
 	public static void main(String[] args) {
-		if (myPalindrome("poiop"))
+		if (recursivePalindrome("poiop", 0))
 		{
 			System.out.println("VERDADERO");
 		}
