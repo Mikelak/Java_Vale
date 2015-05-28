@@ -72,7 +72,8 @@ public class Persona {
 			Persona p = (Persona)obj;
 			return (this.edad == p.edad && this.nombre.equals(p.nombre));
 		}
-	}	
+	}
+	
 	// Interesante
 	public boolean equals2(Object obj) {
 		boolean dev= false;
