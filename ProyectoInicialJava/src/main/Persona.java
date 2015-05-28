@@ -47,4 +47,23 @@ public class Persona {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Nombre: " + this.nombre + " Edad: " + this.edad;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 * El método equals() de Object hace == (compara las referencias)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		Persona p = (Persona)obj;
+		return (this.edad == p.edad && this.nombre == p.nombre);
+	}	
 }
