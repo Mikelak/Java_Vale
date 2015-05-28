@@ -73,4 +73,35 @@ public class Persona {
 			return (this.edad == p.edad && this.nombre.equals(p.nombre));
 		}
 	}	
+	// Interesante
+	public boolean equals2(Object obj) {
+		boolean dev= false;
+		Persona p = null;
+		// Primero las comprobaciones más sencillas (eficientes). (obj == this) descarta lo demás
+		dev = (null!=obj)&&((obj == this)||((null!=(p=esTipoPersona(obj)))&&(contienenLoMismo(this, p))));
+	
+		return (dev);
+	}
+	
+	private Persona esTipoPersona (Object obj)
+	{
+		Persona p = null;
+		
+		if (obj instanceof Persona) {
+			 p = (Persona) obj;
+		}
+		
+		return p;
+		
+	}
+	
+	private static boolean contienenLoMismo (Persona p1, Persona p2)
+	{
+		boolean contienen_lomismo = false;
+		
+		
+		contienen_lomismo = (p1.nombre.equals(p2.nombre)&&(p1.edad==p2.edad));
+		
+		return contienen_lomismo;
+	}
 }
