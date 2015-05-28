@@ -4,12 +4,20 @@ package main;
 public class PrimeraClase {
 
 	// El modificador por defecto es package protected
-	public int calcula() {
-		return 1 + 1;
-	}
 
-	public static void main(String[] argumentos) {
-		PrimeraClase p_clase = new PrimeraClase();
-		System.out.println(p_clase.calcula());
+	public static void main(String[] argumentos) 
+	{
+		Persona persona1 = new Persona("Pepe", 40);
+		Persona persona2 = new Persona("Pepe", 40);
+		Persona persona3 = new Persona("Juan", 50);
+		
+		if (persona3.equals(new String()))
+		{
+			System.out.println("Iguales");
+		}
+		else
+		{
+			System.out.println("No iguales");
+		}
 	}
 }

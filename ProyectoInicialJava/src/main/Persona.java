@@ -63,7 +63,14 @@ public class Persona {
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		Persona p = (Persona)obj;
-		return (this.edad == p.edad && this.nombre == p.nombre);
+		if (obj == null || !(obj instanceof Persona))
+		{
+			return false;
+		}
+		else
+		{
+			Persona p = (Persona)obj;
+			return (this.edad == p.edad && this.nombre.equals(p.nombre));
+		}
 	}	
 }
