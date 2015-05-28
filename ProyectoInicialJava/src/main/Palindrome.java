@@ -72,7 +72,7 @@ public class Palindrome {
 		if (myPalindrome("poiop"))
 		{
 			System.out.println("VERDADERO");
-		} 
+		}
 		else 
 		{
 			System.out.println("FALSO");
