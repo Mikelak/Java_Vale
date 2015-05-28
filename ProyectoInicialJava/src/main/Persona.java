@@ -78,7 +78,7 @@ public class Persona {
 	public boolean equals2(Object obj) {
 		boolean dev= false;
 		Persona p = null;
-		// Primero las comprobaciones más sencillas (eficientes). (obj == this) descarta lo demás
+		// Primero las comprobaciones más sencillas (eficientes). && y ||
 		dev = (null!=obj)&&((obj == this)||((null!=(p=esTipoPersona(obj)))&&(contienenLoMismo(this, p))));
 	
 		return (dev);
