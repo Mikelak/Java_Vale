@@ -56,16 +56,16 @@ public class Palindrome {
 		return bd;
 	}
 	
-	private static boolean recursivePalindrome(String cad)
+	private static boolean recursivePalindrome(String cad, int num)
 	{
-		
-		return false;
-	}
-	
-	private static boolean llamadaRecursiva(String cad, int num)
-	{
-		// if (cad.charAt(num) == cad.charAt(index))
-		return false;
+		if (num == cad.length() - 1)
+		{
+			return cad.charAt(num) == cad.charAt(0);
+		}
+		else
+		{
+			return recursivePalindrome(cad, num++);
+		}		
 	}
 	
 	public static void main(String[] args) {
