@@ -40,14 +40,40 @@ public class Palindrome {
 	
 	private static boolean myPalindrome(String cad)
 	{
+		// Hacemos un reverse de la cadena, y tiene que ser igual
+		int longitud = cad.length();
+		boolean bd = false;
+		String nueva_cadena = "";
+		
+		for (int i = longitud - 1; i >= 0; i--)
+		{
+			nueva_cadena += cad.charAt(i);
+		}	
+		
+		if (cad.equals(nueva_cadena))
+			bd = true;
+		
+		return bd;
+	}
+	
+	private static boolean recursivePalindrome(String cad)
+	{
+		
+		return false;
+	}
+	
+	private static boolean llamadaRecursiva(String cad, int num)
+	{
+		// if (cad.charAt(num) == cad.charAt(index))
 		return false;
 	}
 	
 	public static void main(String[] args) {
-		if (isPalindrome("poop"))
+		if (myPalindrome("poiop"))
 		{
 			System.out.println("VERDADERO");
-		} else 
+		} 
+		else 
 		{
 			System.out.println("FALSO");
 		}
