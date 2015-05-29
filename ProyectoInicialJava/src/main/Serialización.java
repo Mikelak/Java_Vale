@@ -19,6 +19,7 @@ public class Serialización {
 			System.out.println(((Persona)obj_entrada.readObject()).getNombre());
 			System.out.println(((Persona)obj_entrada.readObject()).getNombre());
 			System.out.println(((Persona)obj_entrada.readObject()).getNombre());
+			obj_entrada.close();
 		} 
 		catch (IOException e) 
 		{
