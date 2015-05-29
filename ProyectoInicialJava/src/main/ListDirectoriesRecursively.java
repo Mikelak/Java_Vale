@@ -41,7 +41,7 @@ public class ListDirectoriesRecursively {
 			list = current_file.list(); //got the list
 			for (String cad : list) //and for each one, call
 			{
-				showPath(fname+'\\'+cad, cadspace+" "); //concat the new file escaping backslash and add a blank prefix to increase deapth level
+				showPath(fname+'\\'+cad, cadspace+"  "); //concat the new file escaping backslash and add a blank prefix to increase deapth level
 			}
 		}
 		
