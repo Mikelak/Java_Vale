@@ -19,6 +19,7 @@ public class Serialización {
 			System.out.println(((Persona)obj_entrada.readObject()).getNombre());
 			System.out.println(((Persona)obj_entrada.readObject()).getNombre());
 			System.out.println(((Persona)obj_entrada.readObject()).getNombre());
+			// No es necesario cerrar el FileInputStream
 			obj_entrada.close();
 		} 
 		catch (IOException e) 
@@ -48,6 +49,7 @@ public class Serialización {
 			{
 				obj_salida.writeObject(p);
 			}
+			// No es necesario cerrar el FileOutputStream
 			obj_salida.close();
 		} 
 		catch (IOException e) 
